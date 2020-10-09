@@ -1,18 +1,21 @@
 Metadata-Version: 2.1
 Name: homehubRPi
-Version: 0.0.1
+Version: 0.0.2
 Summary: A small home hub example package
-Home-page: https://github.com/pypa/sampleproject
+Home-page: https://github.com/ngonimombeshora/homehubRPi
 Author: Ngoni Mombeshora
 Author-email: nmombeshora3@gmail.com
 License: UNKNOWN
+Download-URL: https://github.com/ngonimombeshora/homehubRPi/tree/main/dist/homehubRPi-0.0.2.tar.gz
 Description: # Example Package
         
         This is a simple example package. You can use
         [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
         to write your content.
         
+Keywords: Smart home,IOT,Raspberry Pi,Library,pip3
 Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
