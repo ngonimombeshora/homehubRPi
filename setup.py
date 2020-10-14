@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="homehubRPi",
-    version="0.0.2",
+    version="0.0.3",
     author="Ngoni Mombeshora",
     author_email="nmombeshora3@gmail.com",
     description="A small home hub example package",
