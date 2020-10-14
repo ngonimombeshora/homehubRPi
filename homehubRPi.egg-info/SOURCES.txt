@@ -1,7 +1,7 @@
 README.md
 setup.py
 homehubRPi/__init__.py
-homehubRPi/printme.py
+homehubRPi/httpCommunications.py
 homehubRPi.egg-info/PKG-INFO
 homehubRPi.egg-info/SOURCES.txt
 homehubRPi.egg-info/dependency_links.txt

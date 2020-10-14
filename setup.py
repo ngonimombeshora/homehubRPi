@@ -14,7 +14,8 @@ setuptools.setup(
     url="https://github.com/ngonimombeshora/homehubRPi",
     # this should get the tar.gz available
     download_url='https://github.com/ngonimombeshora/homehubRPi/tree/main/dist/homehubRPi-0.0.2.tar.gz',
-    keywords=['Smart home', 'IOT', 'Raspberry Pi', 'Library', 'pip3'],
+    keywords=['Smart home', 'IOT', 'Raspberry Pi',
+              'pip3', 'python', 'MQTT', 'HTTP', 'RESTful'],
     packages=setuptools.find_packages(),
     classifiers=[
         'Intended Audience :: Developers',

@@ -7,7 +7,9 @@ Author: Ngoni Mombeshora
 Author-email: nmombeshora3@gmail.com
 License: UNKNOWN
 Download-URL: https://github.com/ngonimombeshora/homehubRPi/tree/main/dist/homehubRPi-0.0.2.tar.gz
-Description: # Example Package
+Description: # Github repository for homehubRPi PyPI module.
+        
+        ## Current package in testing [homehubRPi](https://test.pypi.org/project/homehubRPi/)
         
         This is a simple example package. You can use
         [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
