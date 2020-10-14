@@ -16,12 +16,14 @@ setuptools.setup(
     download_url='https://github.com/ngonimombeshora/homehubRPi/tree/main/dist/homehubRPi-0.0.2.tar.gz',
     keywords=['Smart home', 'IOT', 'Raspberry Pi',
               'pip3', 'python', 'MQTT', 'HTTP', 'RESTful'],
+
     packages=setuptools.find_packages(),
     classifiers=[
         'Intended Audience :: Developers',
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
+        'Topic :: System :: Operating System Kernels :: Linux'
     ],
     python_requires='>=3.6',
 )
