@@ -1,6 +1,8 @@
 # Github repository for homehubRPi PyPI module.
 
-#### Current package in testing [homehubRPi](https://test.pypi.org/project/homehubRPi/)
+#### Current package in testing available at github
+
+[homehubRPi](https://test.pypi.org/project/homehubRPi/)
 
 ###### Project Desription
 
