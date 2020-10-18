@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: homehubRPi
-Version: 0.0.4
+Version: 0.0.6
 Summary: A small home hub example package
 Home-page: https://github.com/ngonimombeshora/homehubRPi
 Author: Ngoni Mombeshora
 Author-email: nmombeshora3@gmail.com
 License: UNKNOWN
-Download-URL: https://github.com/ngonimombeshora/homehubRPi/tree/main/dist/homehubRPi-0.0.2.tar.gz
+Download-URL: https://github.com/ngonimombeshora/homehubRPi/tree/main/dist/homehubRPi-0.0.6.tar.gz
 Description: # Github repository for homehubRPi PyPI module.
         
         #### Current package in testing available at github
@@ -19,7 +19,7 @@ Description: # Github repository for homehubRPi PyPI module.
         
         This package works in tandem with [hubAPI](https://github.com/ngonimombeshora?tab=repositories) which hosts the database and front-end API for developers. This API can be hosted online or on a local server. Otherwise if one wishes they can use the one hosted on the public domain on netlify at [Insert netlify url](https://guides.github.com/features/mastering-markdown/), which still offers the same amount of security and privacy to ones own smart home ecosystem.
         
-Keywords: Smart home,IOT,Raspberry Pi,pip3,python,MQTT,HTTP,RESTful
+Keywords: Smart home,IOT,Raspberry Pi,pip3,python,MQTT,HTTP/s,RESTful
 Platform: UNKNOWN
 Classifier: Intended Audience :: Developers
 Classifier: Programming Language :: Python :: 3
