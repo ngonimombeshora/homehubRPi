@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Listen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Listen</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ngonidzashe/Documents/homehubRPi/homehubRPi/Listen.py">/home/ngonidzashe/Documents/homehubRPi/homehubRPi/Listen.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Listen.html#Listen">Listen</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Listen">class <strong>Listen</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Listen">Listen</a>(APIUrl,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<a href="#Listen">Listen</a>&nbsp;to&nbsp;database.&nbsp;Functions&nbsp;available&nbsp;to&nbsp;be&nbsp;used&nbsp;for&nbsp;polling&nbsp;the&nbsp;databse&nbsp;and&nbsp;return&nbsp;any&nbsp;changes<br>
+&nbsp;<br>
+&nbsp;This&nbsp;module&nbsp;constantly&nbsp;polls&nbsp;"listens"&nbsp;to&nbsp;the&nbsp;database.&nbsp;to&nbsp;check&nbsp;for&nbsp;change&nbsp;that&nbsp;need&nbsp;to&nbsp;be&nbsp;forwarded&nbsp;to&nbsp;edge&nbsp;devices<br>
+&nbsp;(prompts&nbsp;forwarding&nbsp;of&nbsp;changes&nbsp;using&nbsp;MQTTComms)(Uses&nbsp;httpCommunications&nbsp;module)<br>
+&nbsp;Also&nbsp;listens&nbsp;to&nbsp;edge&nbsp;devices&nbsp;(Uses&nbsp;MQTTCommunications&nbsp;module&nbsp;and&nbsp;prompts&nbsp;database&nbsp;updates)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Listen-__init__"><strong>__init__</strong></a>(self, APIUrl, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Listen-dict_compare"><strong>dict_compare</strong></a>(self, d1, d2)</dt><dd><tt>compare&nbsp;value&nbsp;in&nbsp;two&nbsp;dictinaries</tt></dd></dl>
+
+<dl><dt><a name="Listen-getStatus"><strong>getStatus</strong></a>(self, id)</dt><dd><tt>check&nbsp;device&nbsp;status&nbsp;by&nbsp;id,&nbsp;and&nbsp;return&nbsp;status</tt></dd></dl>
+
+<dl><dt><a name="Listen-get_id_and_status_dict"><strong>get_id_and_status_dict</strong></a>(self, **kwargs)</dt><dd><tt>returns&nbsp;a&nbsp;dict&nbsp;of&nbsp;ids&nbsp;and&nbsp;their&nbsp;statuses,&nbsp;to&nbsp;set&nbsp;global&nbsp;varible&nbsp;"previousIDandStatus"<br>
+&nbsp;for&nbsp;"listen_to_user_status_change"&nbsp;to&nbsp;use.&nbsp;`</tt></dd></dl>
+
+<dl><dt><a name="Listen-listen_to_user_status_change"><strong>listen_to_user_status_change</strong></a>(self, listenRate=None, previousIDandStatusDict=&lt;class 'dict'&gt;, **kwargs)</dt><dd><tt>Indefinately&nbsp;polls&nbsp;the&nbsp;database,&nbsp;waiting&nbsp;for&nbsp;status&nbsp;changes,<br>
+immediately&nbsp;promts&nbsp;mqttComms&nbsp;function&nbsp;to&nbsp;forward&nbsp;status&nbsp;to&nbsp;edge&nbsp;device</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

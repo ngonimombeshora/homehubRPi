@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module httpCommunications</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>httpCommunications</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ngonidzashe/Documents/homehubRPi/homehubRPi/httpCommunications.py">/home/ngonidzashe/Documents/homehubRPi/homehubRPi/httpCommunications.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="http.html">http</a><br>
+</td><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="httpCommunications.html#ConnectToAPI">ConnectToAPI</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ConnectToAPI">class <strong>ConnectToAPI</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ConnectToAPI">ConnectToAPI</a>(APIUrl=None,&nbsp;method=None,&nbsp;data=None,&nbsp;headers=None,&nbsp;id=&amp;lt;class&nbsp;'int'&amp;gt;,&nbsp;**kwargs)<br>
+&nbsp;<br>
+Connect&nbsp;to&nbsp;hup_api&nbsp;via&nbsp;http.&nbsp;Enables&nbsp;access&nbsp;and&nbsp;control&nbsp;to&nbsp;database.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ConnectToAPI-__init__"><strong>__init__</strong></a>(self, APIUrl=None, method=None, data=None, headers=None, id=&lt;class 'int'&gt;, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="ConnectToAPI-get_id_and_status"><strong>get_id_and_status</strong></a>(self, url=None, **kwargs)</dt><dd><tt>fetch&nbsp;id&nbsp;and&nbsp;status&nbsp;of&nbsp;devices&nbsp;from&nbsp;the&nbsp;database</tt></dd></dl>
+
+<dl><dt><a name="ConnectToAPI-http_delete"><strong>http_delete</strong></a>(self, id=None)</dt><dd><tt>Select&nbsp;the&nbsp;device&nbsp;"id"&nbsp;you&nbsp;want&nbsp;to&nbsp;delete&nbsp;not&nbsp;"device_id"<br>
+N.B&nbsp;get&nbsp;"id"&nbsp;from&nbsp;devices&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="ConnectToAPI-http_post"><strong>http_post</strong></a>(self, name=None, category=None, location=None, device_id=None, status=None, jsonData=None, **kwargs)</dt><dd><tt>Make&nbsp;an&nbsp;HTTP&nbsp;post&nbsp;to&nbsp;the&nbsp;hub_api.&nbsp;Used&nbsp;to&nbsp;add&nbsp;a&nbsp;device&nbsp;to&nbsp;the&nbsp;database.</tt></dd></dl>
+
+<dl><dt><a name="ConnectToAPI-http_put"><strong>http_put</strong></a>(self, id=None, name=None, category=None, location=None, device_id=None, status=None, jsonData=None, **args)</dt><dd><tt>Make&nbsp;an&nbsp;HTTP&nbsp;PUT&nbsp;request&nbsp;to&nbsp;the&nbsp;API&nbsp;.&nbsp;Normally&nbsp;used&nbsp;to&nbsp;update&nbsp;device,<br>
+Especially&nbsp;changing&nbsp;states,&nbsp;"ON"&nbsp;and&nbsp;"OFF",<br>
+Or&nbsp;update&nbsp;device&nbsp;details<br>
+N.B&nbsp;To&nbsp;make&nbsp;a&nbsp;put&nbsp;get&nbsp;the&nbsp;device&nbsp;ID&nbsp;number&nbsp;from&nbsp;devices&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="ConnectToAPI-http_request_get"><strong>http_request_get</strong></a>(self, **kwargs)</dt><dd><tt>Make&nbsp;an&nbsp;HTTP&nbsp;request&nbsp;to&nbsp;the&nbsp;API&nbsp;and&nbsp;return&nbsp;list&nbsp;of&nbsp;devices.</tt></dd></dl>
+
+<dl><dt><a name="ConnectToAPI-http_request_get_device"><strong>http_request_get_device</strong></a>(self, id=None, **kwargs)</dt><dd><tt>Make&nbsp;an&nbsp;HTTP&nbsp;request&nbsp;to&nbsp;the&nbsp;API&nbsp;and&nbsp;return&nbsp;specific&nbsp;device&nbsp;information&nbsp;based&nbsp;on&nbsp;the&nbsp;device&nbsp;"id".</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

@@ -1,12 +1,7 @@
 from homehubRPi.httpCommunications import ConnectToAPI
 
 
-"""
-    This module constantly polls "listens" to the database. to check for change that need to be forwarded to edge devices
-    (prompts forwarding of changes using MQTTComms)(Uses httpCommunications module)
-    Also listens to edge devices (Uses MQTTCommunications module and prompts database updates)
 
-"""
 
 
 # Notes
@@ -14,7 +9,13 @@ from homehubRPi.httpCommunications import ConnectToAPI
 # Poll and check against previous status
 class Listen(object):
     """
-    class handling json objects
+   Listen to database. Functions available to be used for polling the databse and return any changes
+   
+    This module constantly polls "listens" to the database. to check for change that need to be forwarded to edge devices
+    (prompts forwarding of changes using MQTTComms)(Uses httpCommunications module)
+    Also listens to edge devices (Uses MQTTCommunications module and prompts database updates)
+
+
     """
 
     def __init__(self, APIUrl, ** kwargs):
@@ -56,8 +57,8 @@ class Listen(object):
 
     def listen_to_user_status_change(self, listenRate=None, previousIDandStatusDict=dict, **kwargs):
         """
-        Indefinately listens to database, waiting for status changes
-        promts mqttComms function to forward status to edge device
+        Indefinately polls the database, waiting for status changes,
+        immediately promts mqttComms function to forward status to edge device
         """
 
         client = ConnectToAPI()
@@ -67,4 +68,4 @@ class Listen(object):
         # compare statuses from previous time to now
         added, removed, modified, same = self.dict_compare(id_and_status_dict,
                                                            previousIDandStatusDict)
-        return same
+        return same, added, modified, removed
