@@ -21,6 +21,13 @@ This package works in tandem with [hubAPI](https://github.com/ngonimombeshora?ta
 pip3 install homehubRPI
 ```
 
+and start using...
+
+'''sh
+from homehubRPi import []
+
+'''
+
 ## 🤔 Documentation
 
 To view documentation in your browser

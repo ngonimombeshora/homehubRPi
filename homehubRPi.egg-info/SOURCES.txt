@@ -1,8 +1,12 @@
 README.md
 setup.py
 homehubRPi/Listen.py
+homehubRPi/UItoEdge_example.py
 homehubRPi/__init__.py
+homehubRPi/exampleMQTTclassUsage.py
 homehubRPi/httpCommunications.py
+homehubRPi/mqttCommunications.py
+homehubRPi/mqtt_publish_example.py
 homehubRPi.egg-info/PKG-INFO
 homehubRPi.egg-info/SOURCES.txt
 homehubRPi.egg-info/dependency_links.txt

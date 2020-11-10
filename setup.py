@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="homehubRPi",
-    version="0.0.6",
+    version="1.0.0",
     author="Ngoni Mombeshora",
     author_email="nmombeshora3@gmail.com",
     description="A small home hub example package",
@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/ngonimombeshora/homehubRPi",
     # this should get the tar.gz available
-    download_url='https://github.com/ngonimombeshora/homehubRPi/tree/main/dist/homehubRPi-0.0.6.tar.gz',
+    download_url='https://github.com/ngonimombeshora/homehubRPi/tree/main/dist/homehubRPi-1.0.0.tar.gz',
     keywords=['Smart home', 'IOT', 'Raspberry Pi',
               'pip3', 'python', 'MQTT', 'HTTP/s', 'RESTful'],
 

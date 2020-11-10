@@ -38,16 +38,16 @@ class ConnectToAPI(object):
 
         headers = {
             'cookie': "csrftoken=Htxdl0KSxalzvXlthtOnPYkM9xFSb17I8wBgh0xTAVn5S7CXiVU2CD2tOZlFTZes",
-            'content-type': "application/json",
-            'authorization': "Basic YWRtaW46cGFzc3dvcmQxMjM="
+            'Content-Type': "application/json",
+            'Authorization': "Basic UGFyZW50OnBhJCR3b3JkMTIz"
         }
 
         conn.request("GET", "/devices/{}/".format(id), payload, headers)
 
         res = conn.getresponse()
-        data = res.read()
+        data = json.loads(res.read())  # .decode("utf-8")
 
-        print(data.decode("utf-8"))
+        # print(data.decode("utf-8"))
         return data
 
     def http_post(self, name=None, category=None, location=None, device_id=None, status=None, jsonData=None, **kwargs):
@@ -92,29 +92,30 @@ class ConnectToAPI(object):
             N.B To make a put get the device ID number from devices list
         """
         conn = http.client.HTTPConnection(self.APIUrl)
-
+        headers = {
+            'cookie': "csrftoken=Htxdl0KSxalzvXlthtOnPYkM9xFSb17I8wBgh0xTAVn5S7CXiVU2CD2tOZlFTZes",
+            'content-type': "application/json",
+            'authorization': "Basic UGFyZW50OnBhJCR3b3JkMTIz"
+        }
         # convert data to json
+        # "PUT" method from harware api should only alter "status" and "reading" fields
         payloadDict = {
-            "name": name,
-            "category": category,
-            "location": location,
+            "name": "",
+            "category": "",
+            "location": "",
             "device_id": device_id,
-            "status": status
+            "status": str(status)
         }
         if jsonData:
             jsonToHttp = json.dumps(jsonData)
         else:
-            jsonToHttp = json.dumps(payloadDict)
+            jsonToHttps = json.dumps(payloadDict)
+            # payload = "{\n\t\"status\":\"{}\"\n}".format(str(status))
+            # conn.request("PUT", "/devices/{}/".format(id), payload, headers)
 
         # payload = "{\n\t\"name\": \"test permissions\",\n\t\"category\": \"sensor\",\n\t\"location\": \"\",\n\t\"device_id\": \"\",\n\t\"status\": \"ON\",\n\t\"created\": \"2020-10-05T19:31:38.548243Z\"\n}"
 
-        headers = {
-            'cookie': "csrftoken=Htxdl0KSxalzvXlthtOnPYkM9xFSb17I8wBgh0xTAVn5S7CXiVU2CD2tOZlFTZes",
-            'content-type': "application/json",
-            'authorization': "Basic YWRtaW46cGFzc3dvcmQxMjM="
-        }
-
-        conn.request("PUT", "/devices/{}/".format(id), jsonToHttp, headers)
+        conn.request("PUT", "/devices/{}/".format(id), jsonData, headers)
 
         res = conn.getresponse()
         data = res.read()
